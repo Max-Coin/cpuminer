@@ -39,9 +39,9 @@ int scanhash_keccak(int thr_id, uint32_t *pdata, const uint32_t *ptarget,
 		pdata[19] = ++n;
 		be32enc(&endiandata[19], n); 
 		keccakhash(hash64, &endiandata);
-        if (((hash64[7]&0xFFFFFF00)==0) && 
+                if (((hash64[7]&0xFFFFFF00)==0) && 
 				fulltest(hash64, ptarget)) {
-            *hashes_done = n - first_nonce + 1;
+                       *hashes_done = n - first_nonce + 1;
 			return true;
 		}
 	} while (n < max_nonce && !work_restart[thr_id].restart);
