@@ -15,7 +15,7 @@ static void keccakhash(void *state, const void *input)
     sph_keccak256 (&ctx_keccak,input, 80);
     sph_keccak256_close(&ctx_keccak, hash);
 
-	memcpy(state, hash, 32);
+    memcpy(state, hash, 32);
 }
 
 int scanhash_keccak(int thr_id, uint32_t *pdata, const uint32_t *ptarget,
