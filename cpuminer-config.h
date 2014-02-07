@@ -38,8 +38,14 @@
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
 
+/* Define to 1 if you have the `crypto' library (-lcrypto). */
+#define HAVE_LIBCRYPTO 1
+
 /* Define to 1 if you have a functional curl library. */
 #define HAVE_LIBCURL 1
+
+/* Define to 1 if you have the `ssl' library (-lssl). */
+#define HAVE_LIBSSL 1
 
 /* Define to 1 if you have the <memory.h> header file. */
 #define HAVE_MEMORY_H 1
@@ -123,7 +129,7 @@
 #define LIBCURL_PROTOCOL_IMAP 1
 
 /* Defined if libcurl supports LDAP */
-#define LIBCURL_PROTOCOL_LDAP 1
+/* #undef LIBCURL_PROTOCOL_LDAP */
 
 /* Defined if libcurl supports POP3 */
 #define LIBCURL_PROTOCOL_POP3 1
